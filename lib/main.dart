@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reksawaluya/network/network.dart';
-import 'package:reksawaluya/routes/home/index.dart';
-import 'package:reksawaluya/routes/login/index.dart';
+import 'package:reksawaluya/routes/register/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginView();
+    return const HomeView();
   }
 }
