@@ -12,6 +12,7 @@ class Constant {
   static const nikKey = 'nik';
   static const addressKey = 'address';
   static const phoneKey = 'phone';
+  static const userIdKey = 'userid';
 
 
 }

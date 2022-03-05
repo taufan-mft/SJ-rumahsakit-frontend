@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reksawaluya/routes/account_info/index.dart';
 import 'package:reksawaluya/routes/home/components/Admin/index.dart';
 import 'package:reksawaluya/routes/home/components/Pasien/index.dart';
 import 'package:reksawaluya/routes/home/components/Poliklinik/index.dart';
@@ -68,8 +69,13 @@ class _HomeViewState extends State<HomeView> {
               ),
               ListTile(
                 title: const Text('Akun'),
-                onTap: () {
+                onTap: () async {
                   Navigator.pop(context);
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AccountInfoView()),
+                  );
+                  _determineScreen();
                 },
               ),
               ListTile(
