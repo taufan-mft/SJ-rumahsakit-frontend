@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reksawaluya/routes/account_info/index.dart';
+import 'package:reksawaluya/routes/app_info/index.dart';
 import 'package:reksawaluya/routes/home/components/Admin/index.dart';
 import 'package:reksawaluya/routes/home/components/Pasien/index.dart';
 import 'package:reksawaluya/routes/home/components/Poliklinik/index.dart';
@@ -82,6 +83,10 @@ class _HomeViewState extends State<HomeView> {
                 title: const Text('Info Aplikasi'),
                 onTap: () {
                   Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AppInfoView()),
+                  );
                 },
               ),
               ListTile(
