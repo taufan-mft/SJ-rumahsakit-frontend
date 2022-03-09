@@ -13,6 +13,7 @@ class Constant {
   static const addressKey = 'address';
   static const phoneKey = 'phone';
   static const userIdKey = 'userid';
+  static const medRecordKey = 'medrecord';
 
 
 }

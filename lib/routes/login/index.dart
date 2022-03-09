@@ -35,6 +35,7 @@ class _LoginViewState extends State<LoginView> {
       await prefs.setString(Constant.nikKey, d['nik']);
       await prefs.setString(Constant.addressKey, d['address']);
       await prefs.setString(Constant.phoneKey, d['phone']);
+      await prefs.setString(Constant.medRecordKey, d['medical_record']);
       await prefs.setInt(Constant.userIdKey, d['id']);
       Navigator.push(
         context,

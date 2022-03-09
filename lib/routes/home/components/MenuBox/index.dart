@@ -6,8 +6,8 @@ import 'package:reksawaluya/utils/AllStyles.dart';
 class MenuBox extends StatelessWidget {
   final String text;
   final LineIcon icon;
-
-  const MenuBox({Key? key, required this.text, required this.icon})
+  final Widget? destination;
+  const MenuBox({Key? key, required this.text, required this.icon, this.destination})
       : super(key: key);
 
   @override
@@ -19,15 +19,23 @@ class MenuBox extends StatelessWidget {
           border: Border.all(color: Colors.black45)),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Column(
-          children: [
-            icon,
-            Text(
-              text,
-              style: AllStyles.primaryMenu(),
-              textAlign: TextAlign.center,
-            )
-          ],
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => destination!),
+            );
+          },
+          child: Column(
+            children: [
+              icon,
+              Text(
+                text,
+                style: AllStyles.primaryMenu(),
+                textAlign: TextAlign.center,
+              )
+            ],
+          ),
         ),
       ),
     );
