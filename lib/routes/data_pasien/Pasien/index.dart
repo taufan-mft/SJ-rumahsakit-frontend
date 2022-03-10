@@ -33,6 +33,7 @@ class _DPPasienViewState extends State<DPPasienView> {
     if (medicalRecord != '-') {
       final result = await network.doGet('/pasien/detail/$medicalRecord');
       final d = jsonDecode(result.body);
+      await prefs.setString(Constant.tanggalKey, d['date']);
       if (d['status'] == 'OK') {
         _cName.text = d['name'];
         _cTanggal.text = d['date'];

@@ -14,6 +14,6 @@ class Constant {
   static const phoneKey = 'phone';
   static const userIdKey = 'userid';
   static const medRecordKey = 'medrecord';
-
+  static const tanggalKey = 'tanggal';
 
 }

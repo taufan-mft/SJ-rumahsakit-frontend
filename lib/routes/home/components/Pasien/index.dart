@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icon.dart';
 import 'package:reksawaluya/routes/data_pasien/index.dart';
 import 'package:reksawaluya/routes/home/components/MenuBox/index.dart';
+import 'package:reksawaluya/routes/pendaftaran/index.dart';
 
 class PasienView extends StatelessWidget {
   const PasienView({Key? key}) : super(key: key);
@@ -25,6 +26,7 @@ class PasienView extends StatelessWidget {
                 width: 20,
               ),
               MenuBox(
+                destination: const PendaftaranView(),
                   text: 'Pendaftaran\nOnline',
                   icon: LineIcon.desktop(
                     size: 60,
