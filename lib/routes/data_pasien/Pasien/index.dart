@@ -44,6 +44,9 @@ class _DPPasienViewState extends State<DPPasienView> {
         _isEdit = true;
       }
     }
+    setState(() {
+
+    });
   }
 
   _doSave() async {
@@ -102,6 +105,10 @@ class _DPPasienViewState extends State<DPPasienView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: Text('Nomor Rekam Medis: $medicalRecord'),
+            ),
             Padding(
                 padding: const EdgeInsets.all(8),
                 child: TextFormField(
